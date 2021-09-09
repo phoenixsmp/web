@@ -1,0 +1,271 @@
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  min-height: 8vh;
+  align-items: center;
+  background-color: #17141d;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.3),0 0 40px rgba(0, 0, 0,0.1) inset;
+  user-select: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.current {
+  border-bottom: 4px solid rgb(45, 240, 117);
+}
+.nav-links {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links li:hover {
+  opacity: 0.6;
+}
+.nav-links a {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.burger div {
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: rgb(226, 226, 226);
+  margin: 0.5rem;
+  transition: all 0.3s ease;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: fixed;
+    right: 0rem;
+    height: 92vh;
+    top: 8vh;
+    background-color: #17141d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 1;
+  }
+  .burger {
+    display: block;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+.nav-open {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+h1 {
+  display: block;
+  text-align: center;
+  font-family: 'Vollkorn', serif;
+  padding: 1rem 5rem;
+  font-size: 3rem;
+ font-weight: 800;
+  color:#009879;
+}
+
+
+.content-table {
+  border-collapse: collapse;
+  margin: 0px auto 0px;
+  font-size: 1.2rem;
+  max-width: 98%;
+  min-width: 95%;
+  min-height: 100vh;
+
+  border-radius: 9px 9px 9px 9px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 1.2rem 1.5rem;
+
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  font-weight: bold;
+  color: #009879;
+}
+.content-table tr, td {
+  text-align: left;
+}
+
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+footer {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  margin-top: auto;
+
+}
+.footer-content {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-family: 'Open Sans', sans-serif;
+}
+.footer-content p:nth-child(5){
+  padding-bottom: 7px;
+}
+.footer-content h3 {
+  margin-right: 0.5rem;
+  letter-spacing: 1.3px;
+}
+
+.contact-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  transition: color 0.8s;
+}
+ i {
+  font-size: 2.5rem;
+  padding: 0 8px;
+}
+.drop-text {
+  padding: 0 5px;
+}
+.fa-twitter-square {
+  color: #55acee;
+}
+.fa-instagram {
+  color: #e6683c;
+  color: rgb(221, 42, 123);
+}
+.fa-envelope {
+  color: rgb(212, 70, 56);
+  color: #e6683c;
+}
+.envelope {
+  padding: 0 5px;
+}
+.fa-twitter-square:hover,
+.fa-instagram:hover,
+.fa-envelope:hover {
+  color: #45e19f;
+}
+
+.copyright {
+  padding-left: 5px;
+  letter-spacing: 1px;
+}
+.want{
+  margin-bottom: 9px;
+  padding: 0 4px;
+}
+@media (max-width: 767px) {
+  .footer-content {
+    display: block;
+  }
+  .contact-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+}
+body h1 {
+  padding-top: 80px;
+}
+@media (min-width: 768px) {
+  body h1 {
+    padding-top: 16px;
+  }
+}

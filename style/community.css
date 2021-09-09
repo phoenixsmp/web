@@ -1,0 +1,316 @@
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    font-family: "Noto Sans JP", sans-serif;
+    height: 100%;
+   
+}
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box;   */
+   
+}   
+body{
+   display: flex;
+   flex-direction: column;
+    background-color: #161623;
+    /* background-image: url(../assests/img/dragon.PNG); */
+    background-repeat: no-repeat;
+   background-size: cover;
+   background-position-y:center;
+    min-height: 100vh;
+   width: 100%;
+}
+.current {
+    border-bottom: 4px solid rgb(45, 240, 117);
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    min-height: 8vh;
+    align-items: center;
+     background-color: #17141d;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0, 0, 0,0.1) inset;
+   user-select: none;
+  }
+  .current {
+    border-bottom: 4px solid rgb(45, 240, 117);
+  }
+  .nav-links {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+  }
+  .nav-links li {
+    list-style: none;
+  }
+  .nav-links li:hover{
+    opacity: 0.6;
+  }
+  .nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .burger div {
+    width: 2.5rem;
+    height: .3rem;
+    background-color: rgb(226, 226, 226);
+    margin: .5rem;
+    transition: all 0.3s ease;
+  }
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .nav-links {
+      width: 60%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-links {
+      position: fixed;
+      right: 0rem;
+      height: 92vh;
+      top: 8vh;
+      background-color: #17141d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+  
+    }
+    .nav-links li {
+      opacity: 1;
+    }
+    .burger {
+      display: block;
+    }
+    nav{
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+  
+  
+  .nav-open {
+    transform: translateX(0%);
+    
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+section{
+ 
+    display: flex;
+    padding: 3rem 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(#f00,#f0f) ;
+    /* clip-path: circle(30% at right 70%); */
+    clip-path: circle(30% at 100% 33%);
+}
+section::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(#2196f3,#e91e63) ;
+   clip-path: circle(20% at 10% 10%);
+}
+.container{
+    position: relative; 
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   backdrop-filter: blur(10px);
+   border-radius: 15px;
+   box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+   background: rgba(255, 255, 255, 0.05);
+}
+.container .card .content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;   
+}
+.container .card .content .imgBx{
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 10px solid rgba(0,0,0,0.25);
+}
+.container .card .content .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .card .content .contentBx h3{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 180x;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+}
+.container .card .sci {
+position:absolute;
+bottom: 50px;
+display: flex;
+}
+.container .card .sci li {
+    list-style: none;
+}
+.container .card .sci li a{
+    text-decoration: none ;
+}
+.btn{
+    margin-top: 3rem;
+    padding: 0rem 2rem;
+    color: #fff;
+    background-color: hsl(142, 87%, 56%);
+    font-size: 2rem; 
+  }
+  footer{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin-top: auto;
+  }
+  .footer-content{
+    display: flex;
+    width: 100%;
+      padding: 1rem;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4rem;
+  }
+  .footer-content h3{
+    margin-right: 0.5rem;
+    letter-spacing: 2px;
+  }
+   .contact-us{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    list-style: none;
+    transition: color 0.8s ;
+  }
+  .contact-us i{
+    font-size: 2.5rem;
+    padding: 0 5px;
+  }
+  .drop-text{
+    padding: 0.5px;
+  }
+ .want{
+   margin-bottom: 7px;
+ }
+  .fa-twitter-square{
+    color: #55acee;
+  }
+  .fa-instagram{
+    color: #e6683c;
+    color:rgb(221, 42, 123  ) 
+  }
+  .fa-envelope{
+    font-size: 2.5rem;
+   color: rgb(212,70,56);
+   color: #e6683c;
+  }
+  .envelope{
+    padding: 0 5px;
+  }
+  .fa-twitter-square:hover,.fa-instagram:hover,.fa-envelope:hover {
+    color:#45e19f;
+  }
+  
+  .copyright{
+    padding-left: 5px;
+    letter-spacing: 1px;
+  }
+  @media (max-width: 767px){
+    .footer-content{
+      display: block;
+    }
+    .contact-us{
+      display:flex;
+      flex-direction: row;
+      justify-content: left;
+    }
+    section::before{
+      clip-path: circle(42.9% at 100% 48%);
+        top: 70%;
+    
+    }
+    section::after{
+   clip-path: circle(40% at 10% 10%);
+      
+    }
+  }
