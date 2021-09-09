@@ -68,7 +68,32 @@
   <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
+<body onload="myFunction()">
+  <header>
+    <div class="wrapper" id="loading">
+      <div class="bird">
+        <div class="hair-container">
+          <div class="hair"></div>
+        </div>
+        <div class="face">
+          <div class="white-container">
+            <div class="white"></div>
+          </div>
+          <div class="shadow-container">
+            <div class="shadow"></div>
+          </div>
+          <div class="bigBeak-container">
+            <div class="bigBeak"></div>
+          </div>
+          <div class="smallBeak-container">
+            <div class="smallBeak"></div>
+          </div>
+          <div class="eye"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <nav>
     <div>
       <svg id="logo" width="140" height="23" viewBox="0 0 140 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -247,5 +272,10 @@
 <script>
   AOS.init();
 </script>
-
+<script>
+   var preloader=document.getElementById('loading');
+  function myFunction(){
+    preloader.style.display='none';
+  }
+</script>
 </html>
