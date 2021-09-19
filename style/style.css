@@ -517,7 +517,11 @@ footer {
     margin-top: 1.5rem;
     width: 100%;
   }
-
+  .about-3 {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
 
   .slider .slides img,
   video {
