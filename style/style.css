@@ -356,12 +356,9 @@ video {
 
 /* ABOUT THE SMP */
 
-.about {
-  display: flex;
-  width: 100%;
-}
 .about-1 {
   padding:2rem 0;
+  width: 100%;
 }
 .about-1 p{
   font-size: 2rem;
@@ -399,9 +396,14 @@ video {
 }
 .about-3 {
   width:20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none ;
  }
 .about-3 img{
-  width: 100%;
+  width: 90%;
+  display: block;
 }
 
 /* FOOTER */
@@ -516,11 +518,6 @@ footer {
     width: 100%;
   }
 
-  .about-3 {
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 20px;
-  }
 
   .slider .slides img,
   video {
