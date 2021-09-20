@@ -134,32 +134,64 @@
     </div>
   </div>
   <hr>
-  <section class="clips">
-    <div class="header">
-      <h1>Glimpse Of The SMP</h1>
-    </div>
-    <div class="slider">
-      <div class="slides active">
-        <video src="./assests/carousel/websitereel1.mp4" poster="./assests/img/phoenixtext.png" controls preload="auto" ></video>
+  <section>
+    <div class="container1">
+      <div class="header">
+        <h1>Glimpse Of The Smp</h1>
       </div>
-      <div class="slides">
-        <video src="./assests/carousel/websitereel2.mp4" controls preload="auto" ></video>
+      <div class="gallery">
+        <div class="item">
+         
+            <img src="./assests/img/dragon.png" alt="image">
+            <h3>main base</h3>
+          
+        </div>
+        <div class="item">
+          
+            <img src="./assests/img/pond.png" alt="image">
+            <h3>main base</h3>
+          
+        </div>
+        <div class="item">
+        
+            <img src="./assests/img/polar.png" alt="image">
+            <h3>main base</h3>
+          
+        </div>
+        <div class="item">
+         
+            <img src="./assests/img/ship.png" alt="image">
+            <h3>main base</h3>
+         
+        </div>
+        <div class="item">
+         
+            <img src="./assests/img/lake.png" alt="image">
+            <h3>main base</h3>
+          </a>
+        </div>
+        <div class="item">
+          
+            <img src="./assests/img/pratham-castle.png" alt="image">
+            <h3>main base</h3>
+          </a>
+        </div>
+        <div class="item">
+          
+            <img src="./assests/img/ufo.png" alt="image">
+            <h3>main base</h3>
+          </a>
+        </div>
+        <div class="item">
+          
+            <img src="./assests/img/beacontower.png" alt="image">
+            <h3>main base</h3>
+         
+        </div>
       </div>
-      <div class="slides">
-        <video src="./assests/carousel/websitereel3.mp4" controls preload="auto" ></video>
-      </div>
-      <div class="slides">
-        <video src="./assests/carousel/websitereel4.mp4" controls preload="auto" ></video>
-      </div>
-    </div>
-    <div class="prevNext">
-      <span class="prev"><i class="fas fa-chevron-left"></i></span>
-      <span class="next"><i class="fas fa-chevron-right"></i></span>
     </div>
   </section>
-
-
-
+  <hr>
   <section class="container1">
     <div class="header">
       <h1>About The SMP</h1>
@@ -230,42 +262,7 @@
     loop: true
   });
 </script>
-<script>
-  const slides = document.querySelectorAll('.slides');
-  const prev = document.querySelector('.prev');
-  const next = document.querySelector('.next');
-  i = 0;
-  function ActiveSlide(n) {
-    for (slide of slides)
-      slide.classList.remove('active');
-    slides[n].classList.add('active');
-  }
-  // function for next btn
-  next.addEventListener('click', function () {
-    if (i == slides.length - 1) {
-      i = 0;
-      ActiveSlide(i);
-    }
-    else {
-      i++;
-      ActiveSlide(i);
-    }
 
-  })
-  // function for prev btn
-  prev.addEventListener('click', function () {
-    if (i == 0) {
-      i = slides.length - 1;
-      ActiveSlide(i);
-    }
-    else {
-      i--;
-      ActiveSlide(i);
-    }
-
-  })
-
-</script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <!-- AOS SCRIPT  -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
