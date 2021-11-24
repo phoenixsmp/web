@@ -40,5 +40,13 @@ document.body.style.position = '';
 document.body.style.top = '';
 window.scrollTo(0, parseInt(scrollY || '0') * -1);
 
+
+$(window).load(function(myFunction) {
+    $(".preloader").fadeOut(1000, function() {
+        $('body').removeClass('loading');
+    });
+  });
+
+
 // happy
 
